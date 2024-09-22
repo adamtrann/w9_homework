@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Highest Recorded Temperature in Australia (Per State)",
+    "width": 500,
+    "height": 500,
+    "projection": {"type": "mercator"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/adamtrann/W9-Homework/refs/heads/main/STE_2016_AUST.json",
+      "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.STE_NAME16",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/adamtrann/W9-Homework/refs/heads/main/max_temperature.csv"
+          },
+          "key": "State",
+          "fields": ["Temperature"]
+        }
+      },
+      {"calculate": "datum.Temperature + 0.1", "as": "Temperature (°C)"}
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "Temperature",
+        "type": "quantitative",
+        "scale": {
+          "domain": [40, 42, 44, 46, 48, 50, 51],
+          "range": [
+            "#FFFFB2",
+            "#FECC5C",
+            "#FD8D3C",
+            "#F03B20",
+            "#BD0026",
+            "#800026",
+            "#4B0082"
+          ]
+        }
+      },
+      "tooltip": [
+        {"field": "properties.STE_NAME16", "type": "nominal", "title": "State"},
+        {"field": "Temperature", "type": "quantitative"}
+      ]
+    }
+  }
+  

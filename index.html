@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="temp_vis.js"></script>
+    <title>Week 9 Homework</title>
+</head>
+
+<body>
+    <center>
+        <h1>Visualisation of Australia's Highest Recorded Temperature</h1>
+    </center>
+    <h3>The domain of your visualisation</h3>
+    <p>The domain of this visualisation pertains to climate, as I ultimately seek to explore its correlation with
+        bushfires in the final assignment.</p>
+    <h3>The visualised dataset (attribute types, source and author, etc.)</h3>
+    <p>The content being visualised relates to the maximum temperature recorded in Australia.
+    <p>
+        The data was extracted from <a href="http://www.bom.gov.au/climate/extreme/records.shtml" target="_blank">the
+            Bureau of Meteorology</a>.
+    </p>
+
+    <h3>Data transformation that you applied (if any), such as normalisation by area or population.</h3>
+    <p>No data transformation as required</p>
+
+    <h3>A justification for the type of map idiom used. For example, explain why you chose to create a proportional
+        symbol map instead of a choropleth map or a dot map.</h3>
+    <p>chose to visualize the highest temperature recorded for each state using a choropleth map because this method
+        effectively highlights geographic differences in temperature. A choropleth map allows for a clear visual
+        representation of data by filling regions with varying shades or colors based on their values, making it easy to
+        compare temperatures across states at a glance.
+
+        Using this medium, viewers can quickly identify which states experience the highest temperatures and observe
+        patterns, such as clusters of higher temperatures or areas with more moderate climates. Additionally, choropleth
+        maps can convey a sense of scale, allowing for easy interpretation of relative differences in temperature among
+        the states.</p>
+
+    <center>
+        <div id="spatial_map"></div>
+    </center>
+
+</body>
+
+</html>
