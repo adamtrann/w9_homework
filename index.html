@@ -26,21 +26,33 @@
         The data was extracted from <a href="http://www.bom.gov.au/climate/extreme/records.shtml" target="_blank">the
             Bureau of Meteorology</a>.
     </p>
-
+    <p>
+        In regards to the attributes, we were primarily concerned with the <b>states</b> and the highest recorded <b>temperature</b>. 
+    </p>
     <h3>Data transformation that you applied (if any), such as normalisation by area or population.</h3>
     <p>No data transformation as required</p>
 
     <h3>A justification for the type of map idiom used. For example, explain why you chose to create a proportional
         symbol map instead of a choropleth map or a dot map.</h3>
-    <p>chose to visualize the highest temperature recorded for each state using a choropleth map because this method
+    <p>I chose to visualise the highest temperature recorded for each state using a choropleth map because this method
         effectively highlights geographic differences in temperature. A choropleth map allows for a clear visual
         representation of data by filling regions with varying shades or colors based on their values, making it easy to
-        compare temperatures across states at a glance.
+        compare temperatures across states at a glance. 
+    </p>
 
+    
+    <p>
         Using this medium, viewers can quickly identify which states experience the highest temperatures and observe
         patterns, such as clusters of higher temperatures or areas with more moderate climates. Additionally, choropleth
         maps can convey a sense of scale, allowing for easy interpretation of relative differences in temperature among
-        the states.</p>
+        the states.
+    
+    </p>
+
+    <p>
+        In addition to this, the EqualEarth projection was used to preserve the sizing of the map to ensure accurate representation of the map as 
+        other methods may distort the sizing of regions, which may skew the perception of value distribution, which is a core element of choropleth visualisations
+    </p>
 
     <center>
         <div id="spatial_map"></div>

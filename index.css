@@ -2,3 +2,11 @@ body {
     padding-left: 100px;   
     padding-right: 100px;  
 }
+
+h3 {
+    font-style: italic;   
+}
+
+b{
+    font-style: italic;
+}
